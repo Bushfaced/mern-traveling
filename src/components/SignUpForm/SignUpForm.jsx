@@ -11,11 +11,14 @@ export default class SignUpForm extends Component {
 
   handleSubmit = (evt) => {
     evt.preventDefault();
-
+    alert(JSON.stringify(this.state));
   }
 
   handleChange = (evt) => {
-
+    this.setState({
+      [evt.target.name]: evt.target.value,
+      error: ''
+    });
   }
 
   render() {
