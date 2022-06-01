@@ -14,7 +14,7 @@ function App() {
     <main className="App">
       { user ?
         <>
-          <NavBar user={user} />
+          <NavBar user={user} setUser={setUser} />
           <Routes>
             {/* Route components in here */}
             <Route path="/orders/new" element={<NewOrderPage />} />
