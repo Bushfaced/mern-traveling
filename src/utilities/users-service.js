@@ -11,7 +11,7 @@ export async function signUp(userData) {
   // module.
   const token = await usersAPI.signUp(userData);
   localStorage.setItem('token', token);
-  return token;
+  return getUser();
 }
 
 export function getToken() {
