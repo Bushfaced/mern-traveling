@@ -15,7 +15,7 @@ async function login(req, res) {
     if (!match) throw new Error();
     const token = createJWT(user);
     res.json(token);
-  } catch (err) {
+  } catch {
     res.status(400).json('Bad Credentials');
   }
 }
