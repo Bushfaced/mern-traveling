@@ -1,4 +1,8 @@
-# MERN-Stack Infrastructure
+# Mern Traveling
 
-Clone this repo to provide the starter code for a comprehensive MERN-Stack project including token-based authentication.
+## About:
+## Getting Started:
+## Technologies:
+## ScreeShots:
+## Next Steps:
 
