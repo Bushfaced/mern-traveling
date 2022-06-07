@@ -1,7 +1,6 @@
 import { checkToken } from "../../utilities/users-service";
-import { NewLogForm } from "../../components/NewLogForm/NewLogForm";
 
-export default function NewLogPage() {
+export default function OrderHistoryPage() {
   async function handleCheckToken() {
     const expDate = await checkToken();
     console.log(expDate);
@@ -10,7 +9,6 @@ export default function NewLogPage() {
   return (
     <>
       <h1>Add Travel Logs</h1>
-      <NewLogForm />
       <button onClick={handleCheckToken}>Check When My Login Expires</button>
     </>
   );
