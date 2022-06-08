@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
-const colors = require('colors')
 
 require('dotenv').config();
 // Connect to db after the dotenv above
@@ -23,7 +22,6 @@ app.use(require('./config/checkToken'));
 
 // Put all API routes here (before the catch-all)
 app.use('/api/users', require('./routes/api/users'));
-app.use('/api/logs', require('./routes/api/logs'));
 
 // "catch-all" route that will match all GET requests
 // that don't match an API route defined above
