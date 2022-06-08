@@ -3,7 +3,7 @@ const Log = require('../../models/log');
 module.exports = {
   index,
   show,
-  // create,
+  // createLog,
   // delete: deleteLog,
   // update: updateLog,
 };
