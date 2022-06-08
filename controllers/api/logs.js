@@ -1,4 +1,4 @@
-const Item = require('../../models/log');
+const Log = require('../../models/log');
 
 module.exports = {
   index,

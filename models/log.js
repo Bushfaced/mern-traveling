@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
 
-const itemSchema = require('./logSchema');
+const logSchema = require('./logSchema');
 
-module.exports = mongoose.model('Item', itemSchema);
+module.exports = mongoose.model('Log', logSchema);
