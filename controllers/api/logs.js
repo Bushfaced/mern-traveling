@@ -2,7 +2,10 @@ const Log = require('../../models/log');
 
 module.exports = {
   index,
-  show
+  show,
+  // create,
+  // delete: deleteLog,
+  // update: updateLog,
 };
 
 async function index(req, res) {
