@@ -3,18 +3,30 @@ const Log = require('../../models/log');
 module.exports = {
   index,
   show,
-  // createLog,
+  create,
   // delete: deleteLog,
   // update: updateLog,
 };
 
 async function index(req, res) {
   const logs = await Log.find({user: req.user._id}).sort('-createdAt').exec();
-  logs.sort((a, b) => a.category.sortOrder - b.category.sortOrder);
   res.json(logs);
 }
 
 async function show(req, res) {
-  const log = await Log.findById(req.params.id);
-  res.json(log);
+  const logs = await Log.findById(req.params.id);
+  res.json(logs);
 }
+
+async function create(req, res) {
+  const logs = await Log.create(req.body._id);
+  res.json(logs)
+}
+
+// async function deleteLog(req, res) {
+
+// }
+
+// async function updateLog(req, res) {
+
+// }
