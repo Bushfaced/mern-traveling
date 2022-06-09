@@ -1,4 +1,3 @@
-import { checkToken } from "../../utilities/users-service";
 import { useState, useEffect } from 'react';
 import * as logsAPI from "../../utilities/logs-api";
 import LogList from "../../components/LogList/LogList";
@@ -12,9 +11,12 @@ export default function AllLogsPage() {
       setLogs(logs);
     }
     getLogs();
-  }, []);
+  }, [])
 
-  
+  async function deleteLog(logData) {
+    const log = await logsAPI.deleteLog(logData);
+    setLogs([...logs, log])
+  }
 
   return (
     <main>

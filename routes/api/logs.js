@@ -7,8 +7,7 @@ router.get('/:id', logsCtrl.show);
 //create route
 router.post('/', logsCtrl.create)
 //deleteLog route
-// router.delete('/:id', logsCtrl.deleteLog);
-//updateLog route
-// router.put('/logs/:id', logsCtrl.updateLog);
+router.delete('/:id', logsCtrl.deleteLog);
+
 
 module.exports = router;

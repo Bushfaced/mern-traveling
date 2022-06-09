@@ -4,8 +4,7 @@ module.exports = {
   index,
   show,
   create,
-  // delete: deleteLog,
-  // update: updateLog,
+  deleteLog,
 };
 
 async function index(req, res) {
@@ -24,10 +23,8 @@ async function create(req, res) {
   res.json(log)
 }
 
-// async function deleteLog(req, res) {
-
-// }
-
-// async function updateLog(req, res) {
-
-// }
+async function deleteLog(req, res) {
+  req.body.user = req.user._id;
+  const log = await Log.deleteLog(req.body);
+  res.json(log)
+}

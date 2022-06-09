@@ -1,10 +1,10 @@
 export default function LogList({logs}) {
-  const logList = logs.map(l => <p>{l.title}</p>)
+  const logList = logs.map((l, index) => <p key={index}>{l.title}</p>)
 
   return(
-    <>
-    {logList}
-    </>
+    <main>
+    <ul>{logList}</ul>
+    </main>
   );
 
 }

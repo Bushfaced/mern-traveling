@@ -14,6 +14,6 @@ export function add(payload) {
   return sendRequest(BASE_URL, "POST", payload);
 }
 
-// export function deleteLog(payload) {
-//   return sendRequest(BASE_URL, "DELETE", payload);
-// }
+export function deleteLog(payload) {
+  return sendRequest(BASE_URL, "DELETE", payload);
+}
