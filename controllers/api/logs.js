@@ -9,7 +9,7 @@ module.exports = {
 };
 
 async function index(req, res) {
-  const logs = await Log.find({}).sort('timestamp').exec();
+  const logs = await Log.find({user: req.user._id}).sort('-createdAt').exec();
   logs.sort((a, b) => a.category.sortOrder - b.category.sortOrder);
   res.json(logs);
 }
