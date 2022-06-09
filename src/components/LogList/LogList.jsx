@@ -8,8 +8,3 @@ export default function LogList({logs}) {
   );
 
 }
-
-
-
-
-
