@@ -4,9 +4,11 @@ const logsCtrl = require('../../controllers/api/logs');
 
 router.get('/', logsCtrl.index);
 router.get('/:id', logsCtrl.show);
-//createLog route
+//create route
+router.post('/', logsCtrl.create)
 //deleteLog route
+// router.delete('/logs/:id', logsCtrl.deleteLog);
 //updateLog route
-
+// router.put('/logs/:id', logsCtrl.updateLog);
 
 module.exports = router;

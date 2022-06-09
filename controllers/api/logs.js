@@ -19,8 +19,9 @@ async function show(req, res) {
 }
 
 async function create(req, res) {
-  const logs = await Log.create(req.body._id);
-  res.json(logs)
+  req.body.user = req.user._id;
+  const log = await Log.create(req.body);
+  res.json(log)
 }
 
 // async function deleteLog(req, res) {

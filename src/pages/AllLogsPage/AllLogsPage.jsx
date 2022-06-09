@@ -1,16 +1,25 @@
 import { checkToken } from "../../utilities/users-service";
+import { useState, useEffect } from 'react';
+import * as logsAPI from "../../utilities/logs-api";
+import LogList from "../../components/LogList/LogList";
 
 export default function AllLogsPage() {
-  async function handleCheckToken() {
-    const expDate = await checkToken();
-    console.log(expDate);
-  }
+  const [logs, setLogs] = useState([]);
+
+  useEffect(function() {
+    async function getLogs() {
+      const logs = await logsAPI.getAll();
+      setLogs(logs);
+    }
+    getLogs();
+  }, []);
+
   
+
   return (
-    <>
+    <main>
       <h1>All Logs</h1>
-      {/* put something here to display all created logs I think */}
-      <button onClick={handleCheckToken}>Check When My Login Expires</button>
-    </>
+      <LogList logs={logs}/>
+    </main>
   );
 }

@@ -9,3 +9,7 @@ export function getAll() {
 export function getById(id) {
   return sendRequest(`${BASE_URL}/${id}`);
 }
+
+export function add(payload) {
+  return sendRequest(BASE_URL, "POST", payload);
+}
