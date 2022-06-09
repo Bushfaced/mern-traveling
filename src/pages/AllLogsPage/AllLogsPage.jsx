@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import * as logsAPI from "../../utilities/logs-api";
-import LogList from "../../components/LogList/LogList";
+import LogCard from "../../components/LogCard/LogCard";
 
 export default function AllLogsPage() {
   const [logs, setLogs] = useState([]);
@@ -13,15 +13,13 @@ export default function AllLogsPage() {
     getLogs();
   }, [])
 
-  async function deleteLog(logData) {
-    const log = await logsAPI.deleteLog(logData);
-    setLogs([...logs, log])
-  }
-
   return (
     <main>
       <h1>All Logs</h1>
-      <LogList logs={logs}/>
+      {logs.map(function(log, index){
+        return <LogCard className="logCard" key={index} log={log} />
+      })}
+
     </main>
   );
 }

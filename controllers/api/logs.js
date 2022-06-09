@@ -24,7 +24,6 @@ async function create(req, res) {
 }
 
 async function deleteLog(req, res) {
-  req.body.user = req.user._id;
   const log = await Log.deleteLog(req.body);
-  res.json(log)
+  req.json(log);
 }
