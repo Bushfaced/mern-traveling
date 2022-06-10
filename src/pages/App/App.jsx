@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import AddLogPage from '../AddLogPage/AddLogPage';
@@ -16,9 +16,9 @@ function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            {/* Route components in here */}
             <Route path="/logs/new" element={<AddLogPage />} />
             <Route path="/logs" element={<AllLogsPage />} />
+            <Route path="/*" element={<Navigate to="/logs" />} />
           </Routes>
         </>
         :

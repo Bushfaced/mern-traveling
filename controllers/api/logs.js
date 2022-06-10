@@ -24,6 +24,6 @@ async function create(req, res) {
 }
 
 async function deleteLog(req, res) {
-  const log = await Log.deleteLog(req.body);
-  req.json(log);
+  await Log.findOneAndDelete({_id: req.params.id, user: req.user._id});
+  res.json('Deleted!');
 }
