@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = require('mongoose').Schema;
 
+
 const logSchema = new Schema({
   title: { type: String, required: true },
   destination: { type: String, required: true },

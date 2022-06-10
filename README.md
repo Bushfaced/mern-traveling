@@ -6,11 +6,13 @@
 - Link to Trello Board: https://trello.com/b/VJth5YAL/mern-traveling
 - Link to Deployed App: https://mern-traveling.herokuapp.com/
 
-## Screenshots: 
+## Wireframes: 
 ![screenshot of Auth Page](https://i.imgur.com/vbw6aH4.jpg)
 ![screenshot of Index Page](https://i.imgur.com/ht3XjiL.jpg))
 ![screenshot of Log Form](https://i.imgur.com/bc7NFRG.jpg))
 ![screenshot of Details Page](https://i.imgur.com/HG9GXqQ.jpg))
+
+## Screenshots: 
 
 ## Next Steps: 
 - Keyword Searches

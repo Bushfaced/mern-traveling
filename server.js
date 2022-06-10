@@ -5,15 +5,12 @@ const logger = require('morgan');
 
 
 require('dotenv').config();
-// Connect to db after the dotenv above
+
 require('./config/database');
 
 const app = express();
 
 app.use(logger('dev'));
-// Process data in body of request if 
-// Content-Type: 'application/json'
-// and put that data on req.body
 app.use(express.json());
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
@@ -21,13 +18,11 @@ app.use(express.static(path.join(__dirname, 'build')));
 // middleware that adds the user object from a JWT to req.user
 app.use(require('./config/checkToken'));
 
-// Put all API routes here (before the catch-all)
 const ensureLoggedIn = require('./config/ensureLoggedIn');
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/logs', ensureLoggedIn, require('./routes/api/logs'));
 
-// "catch-all" route that will match all GET requests
-// that don't match an API route defined above
+// "catch-all" route for GET
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
