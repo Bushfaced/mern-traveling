@@ -6,7 +6,8 @@ export default function LogCard({log}) {
     <p>{log.title}</p>
     <p>{log.destination}</p>
     <p>{log.content}</p>
-    <button onClick={() => deleteLog(log._id)}>X</button>
+    <button onClick={(d) => deleteLog(d.target.value)}>X</button>
+    tried to wrap the onClick in a function here 
     </main>
   )
 }

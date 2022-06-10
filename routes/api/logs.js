@@ -8,3 +8,4 @@ router.post('/', logsCtrl.create)
 router.delete('/logs/:id', logsCtrl.deleteLog);
 
 module.exports = router;
+
