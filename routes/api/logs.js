@@ -5,6 +5,6 @@ const logsCtrl = require('../../controllers/api/logs');
 router.get('/', logsCtrl.index);
 router.get('/:id', logsCtrl.show);
 router.post('/', logsCtrl.create)
-router.delete('/:id', logsCtrl.deleteLog);
+router.delete('/logs/:id', logsCtrl.deleteLog);
 
 module.exports = router;
