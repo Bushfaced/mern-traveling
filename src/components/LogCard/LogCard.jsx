@@ -1,5 +1,3 @@
-import{ deleteLog } from "../../utilities/logs-api";
-
 export default function LogCard({log, handleDeleteLog}) {
  
   return (

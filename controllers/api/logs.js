@@ -8,7 +8,7 @@ module.exports = {
 };
 
 async function index(req, res) {
-  const logs = await Log.find({user: req.user._id}).sort('-createdAt').exec();
+  const logs = await Log.find({}).sort('-createdAt').exec();
   res.json(logs);
 }
 

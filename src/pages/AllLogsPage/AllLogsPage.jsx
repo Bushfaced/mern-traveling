@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react';
 import * as logsAPI from "../../utilities/logs-api";
 import LogCard from "../../components/LogCard/LogCard";
-import { useNavigate } from "react-router-dom";
 import { deleteLog } from '../../utilities/logs-api';
 
 export default function AllLogsPage() {
   const [logs, setLogs] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(function() {
     async function getLogs() {
@@ -15,8 +13,6 @@ export default function AllLogsPage() {
     }
     getLogs();
   }, [])
-
-  
 
   async function handleDeleteLog(id) {
     await logsAPI.deleteLog(id);
