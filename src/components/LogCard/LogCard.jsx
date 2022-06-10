@@ -7,7 +7,7 @@ export default function LogCard({log}) {
     <p>{log.destination}</p>
     <p>{log.content}</p>
     <button onClick={(d) => deleteLog(d.target.value)}>X</button>
-    tried to wrap the onClick in a function here 
+    {/* tried to wrap the onClick in a function ^ here  */}
     </main>
   )
 }
