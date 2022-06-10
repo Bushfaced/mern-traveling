@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import * as logsAPI from "../../utilities/logs-api";
 import LogCard from "../../components/LogCard/LogCard";
-import { deleteLog } from '../../utilities/logs-api';
 
-export default function AllLogsPage() {
+export default function AllLogsPage({ user }) {
   const [logs, setLogs] = useState([]);
 
   useEffect(function() {
@@ -24,7 +23,7 @@ export default function AllLogsPage() {
     <main>
       <h1>All Logs</h1>
       {logs.map(function(log, index){
-        return <LogCard className="logCard" key={index} log={log} handleDeleteLog={handleDeleteLog}/>
+        return <LogCard className="logCard" key={index} log={log} handleDeleteLog={handleDeleteLog} user={user}/>
       })}
 
     </main>

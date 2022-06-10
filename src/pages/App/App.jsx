@@ -17,7 +17,7 @@ function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             <Route path="/logs/new" element={<AddLogPage />} />
-            <Route path="/logs" element={<AllLogsPage />} />
+            <Route path="/logs" element={<AllLogsPage user={user}/>} />
             <Route path="/*" element={<Navigate to="/logs" />} />
           </Routes>
         </>
