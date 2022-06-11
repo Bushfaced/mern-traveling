@@ -1,0 +1,8 @@
+.allLogsTitle {
+  text-align: center;
+}
+
+.logCard {
+  display: inline-block;
+  margin: auto;
+}

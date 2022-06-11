@@ -1,0 +1,8 @@
+.card {
+  width: 18rem;
+}
+
+.card > h6 {
+  text-decoration: underline;
+  color: darkblue;
+}
