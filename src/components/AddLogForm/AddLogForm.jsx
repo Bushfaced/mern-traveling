@@ -21,7 +21,7 @@ export default function AddLogForm() {
       <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" placeholder='Title' required/>
       <input value={destination} onChange={(e) => setDestination(e.target.value)} type="text" placeholder='Destination' required/>
       <textarea value={content} onChange={(e) => setContent(e.target.value)} placeholder='Your Experience' required></textarea>
-      <button type='submit'>
+      <button class="btn btn-primary" type="submit">
         ADD LOG
       </button>
     </form>
