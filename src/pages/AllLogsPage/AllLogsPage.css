@@ -2,6 +2,8 @@
   text-align: center;
 }
 
-#logCard {
-  display: inline-block;
+.logCard {
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }

@@ -24,7 +24,7 @@ export default function AllLogsPage({ user }) {
     <main>
       <h1 className='allLogsTitle'>All Logs</h1>
       {logs.map(function(log, index){
-        return <div className='' id='logCard'><LogCard key={index} log={log} handleDeleteLog={handleDeleteLog} user={user}/></div>
+        return <div className='logCard'><LogCard key={index} log={log} handleDeleteLog={handleDeleteLog} user={user}/></div>
       })}
     </main>
   );
