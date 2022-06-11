@@ -1,8 +1,18 @@
 .card {
-  width: 18rem;
+  width: 28rem;
 }
 
-.card > h6 {
+h4 {
+  text-align: center;
+}
+
+h6 {
+  text-align: center;
   text-decoration: underline;
   color: darkblue;
+}
+
+content {
+  text-indent: 1rem;
+  text-align: justify;
 }
