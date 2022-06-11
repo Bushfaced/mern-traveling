@@ -1,4 +1,4 @@
-const bootstrap = require('bootstrap');
+// const bootstrap = require('bootstrap');
 
 export default function LogCard({log, handleDeleteLog, user}) {
   return (

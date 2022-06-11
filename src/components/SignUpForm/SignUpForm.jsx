@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { signUp } from '../../utilities/users-service';
-const bootstrap = require('bootstrap');
+// const bootstrap = require('bootstrap');
 
 export default class SignUpForm extends Component {
   state = {

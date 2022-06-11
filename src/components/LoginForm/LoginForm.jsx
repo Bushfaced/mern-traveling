@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
-const bootstrap = require('bootstrap');
+// const bootstrap = require('bootstrap');
 
 export default function LoginForm({ setUser }) {
   const [credentials, setCredentials] = useState({

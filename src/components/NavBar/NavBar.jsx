@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service';
-const bootstrap = require('bootstrap');
+// const bootstrap = require('bootstrap');
 
 export default function NavBar({ user, setUser }) {
 

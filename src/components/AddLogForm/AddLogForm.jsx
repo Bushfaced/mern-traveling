@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import * as logsAPI from "../../utilities/logs-api";
-const bootstrap = require('bootstrap');
+// const bootstrap = require('bootstrap');
 
 export default function AddLogForm() {
   const [content, setContent] = useState('');
