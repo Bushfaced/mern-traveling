@@ -1,6 +1,6 @@
 # MERN-Stack Infrastructure
 
-## Description: This site/app is intended as a multi-author travel log for users. Users can post anything they want to about where they are going, where they want to go or, most preferably, where they have already traveled to.
+## Description: This site/app is intended as a multi-author travel blog for users. Users can post anything they want to about where they are going, where they want to go or, most preferably, where they have already traveled to. The biggest allure here is that all posts are publicly anonymous. This allows for users to share their stories without the normal fear of retaliation as well as eliminates the need to create "fake" users, like has become rampant on main stream social media sites.
 
 ## Getting Started:
 - Link to Trello Board: https://trello.com/b/VJth5YAL/mern-traveling
@@ -8,18 +8,23 @@
 
 ## Wireframes: 
 ![screenshot of Auth Page](https://i.imgur.com/vbw6aH4.jpg)
-![screenshot of Index Page](https://i.imgur.com/ht3XjiL.jpg))
-![screenshot of Log Form](https://i.imgur.com/bc7NFRG.jpg))
-![screenshot of Details Page](https://i.imgur.com/HG9GXqQ.jpg))
+![screenshot of Index Page](https://i.imgur.com/ht3XjiL.jpg)
+![screenshot of Log Form](https://i.imgur.com/bc7NFRG.jpg)
 
 ## Screenshots: 
+![screenshot of Auth Page](https://i.imgur.com/Mjj4pYu.jpg)
+![screenshot of Sign-up Page](https://i.imgur.com/cm8tKnG.jpg)
+![screenshot of All Logs Collapsed View](https://i.imgur.com/Rw4W8CD.png)
+![screenshot of All Logs Expanded View](https://i.imgur.com/oNso5Tq.png)
+![screenshot of Add Log Form](https://i.imgur.com/elunTSh.jpg)
 
 ## Next Steps: 
 - Keyword Searches
 - A separate view of all Logs and my Logs
 - Ability to Like or Dislike a Log
-- Add and delete owned comments
-- Upload Media to the Log
+- Add and delete owned comments on a log
+- Upload Media with a new Log
+- Considering making the user encrypted so their ID could never be known, even to the database
 
 ## <h2 align="left">Technologies Used </h2>
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) 
