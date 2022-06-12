@@ -4,4 +4,7 @@
 
 .addLogTitle {
   text-align: center;
+  color: rgb(0, 115, 255);
+  font-family: 'Franklin Gothic Medium';
+  text-shadow: 1px 1px 1px black;
 }

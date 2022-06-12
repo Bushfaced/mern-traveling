@@ -28,13 +28,13 @@ export default function LoginForm({ setUser }) {
     <main className='container' id='loginForm'>
       <form autoComplete="off" onSubmit={handleSubmit}>
         <div className="row g-3 align-items-center">
-            <label for="exampleInputEmail1" className="form-label">Email</label>
-            <input type="email" name="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='What you signed up with or ^' value={credentials.email} onChange={handleChange} required />
+            <label  className="form-label">Email</label>
+            <input type="email" name="email" className="form-control" aria-describedby="emailHelp" placeholder='What you signed up with or ^' value={credentials.email} onChange={handleChange} required />
             <div id="emailHelp" className="form-text"></div>
           </div>
           <div className="row g-3 align-items-center">
-            <label for="exampleInputPassword1" className="form-label">Password</label>
-            <input type="password" name="password" className="form-control" id="exampleInputPassword1" placeholder='I hope you know it!' value={credentials.password} onChange={handleChange} required />
+            <label className="form-label">Password</label>
+            <input type="password" name="password" className="form-control" placeholder='I hope you know it!' value={credentials.password} onChange={handleChange} required />
             <button type="submit" className="btn btn-primary">LOG IN</button>
         </div>
         <p className="error-message">&nbsp;{error}</p>

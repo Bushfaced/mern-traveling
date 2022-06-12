@@ -6,7 +6,7 @@ export default function LogCard({log, handleDeleteLog, user}) {
       <div className="card">
         <div className="accordion-item">
           <h4 className="accordion-header">
-            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse" aria-expanded="true" aria-controls="flush-collapseOne">{log.title}
+            <button className="accordion-button collapsed" id="accordionBtn" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse" aria-expanded="true" aria-controls="flush-collapseOne">{log.title}
             </button>
           </h4>
           <div id="flush-collapse" className="accordion-collapse collapse" aria-labelledby="flush-headingOne">

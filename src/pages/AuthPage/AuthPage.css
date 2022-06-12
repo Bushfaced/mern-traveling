@@ -4,8 +4,18 @@ body {
   background-size: 100%;
 }
 
-.welcomeMessage {
+.wMessageA {
   text-align: center;
+  color: rgb(0, 115, 255);
+  font-family: 'Franklin Gothic Medium';
+  font-size: 40px;
+  text-shadow: 1px 1px 1px black;
+}
+
+.wMessageB {
+  text-align: center;
+  font-size: larger bold;
+  text-shadow: 1px 1px 1px rgb(0, 115, 255);
 }
 
 #signupBtn {

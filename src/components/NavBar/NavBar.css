@@ -1,11 +1,19 @@
  #navBar {
+  padding: 0%;
   font-size: x-large;
-  position: fixed;
+  position: absolute;
   border: solid 2px black;
   border-radius: 5%;
+  font-family: 'Franklin Gothic Medium';
+  text-shadow: 1px 1px rgb(0, 115, 255);
 }
 
 #itemLink {
   text-align: center;
   border: solid black;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  color: rgb(0, 115, 255);
+  text-shadow: 1px 1px 1px black;
 }
