@@ -1,0 +1,11 @@
+ #navBar {
+  font-size: x-large;
+  position: fixed;
+  border: solid 2px black;
+  border-radius: 5%;
+}
+
+#itemLink {
+  text-align: center;
+  border: solid black;
+}

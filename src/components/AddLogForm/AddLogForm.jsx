@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import * as logsAPI from "../../utilities/logs-api";
+import './AddLogForm.css'
 
 export default function AddLogForm() {
   const [content, setContent] = useState('');
@@ -16,13 +17,21 @@ export default function AddLogForm() {
   }
 
   return (
-    <form onSubmit={handleAddLog}>
-      <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" placeholder='Title' required/>
-      <input value={destination} onChange={(e) => setDestination(e.target.value)} type="text" placeholder='Destination' required/>
-      <textarea value={content} onChange={(e) => setContent(e.target.value)} placeholder='Your Experience' required></textarea>
-      <button className="btn btn-primary" type="submit">
-        ADD LOG
-      </button>
+    <form className="container" id="addLogForm" onSubmit={handleAddLog}>
+      <div className="mb-3">
+        <input className="form-control" id="addlogForm" value={title} onChange={(e) => setTitle(e.target.value)} type="text" placeholder='Title' required/>
+      </div>
+      <div className="mb-3">
+        <input className="form-control" id="addlogForm" value={destination} onChange={(e) => setDestination(e.target.value)} type="text" placeholder='Destination' required/>
+      </div>
+      <div className="mb-3">
+        <textarea className="form-control" id="addlogForm" value={content} onChange={(e) => setContent(e.target.value)} placeholder='Your Experience' required></textarea>
+      </div>
+      <div className="mb-3">
+        <button className="btn btn-primary" type="submit" id="addlogForm">
+          ADD LOG
+        </button>
+      </div>
     </form>
   );
 }
