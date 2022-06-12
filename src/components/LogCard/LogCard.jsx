@@ -2,12 +2,23 @@ import "./LogCard.css"
 
 export default function LogCard({log, handleDeleteLog, user}) {
   return (
-    <main className="card">
-      <h4 className="card-header">{log.title}</h4>
-      <h6 className="card-title">{log.destination}</h6>
-      <content className="card-text">{log.content}</content>
-      <br />
-      {log.user === user._id && <button onClick={() => handleDeleteLog(log._id)} type="button" className="btn btn-danger btn-sm">X</button>}
+    <main className="accordion accordion-flush">
+      <div className="card">
+        <div className="accordion-item">
+          <h4 className="accordion-header" id="panelsStayOpen-headingOne">
+            <button id="accordion-button" className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse" aria-expanded="true" aria-controls="flush-collapseOne">{log.title}
+            </button>
+          </h4>
+          <div id="flush-collapse" className="accordion-collapse collapse show" aria-labelledby="flush-headingOne">
+            <div className="accordion-body">
+              <h6 className="card-title">{log.destination}</h6>
+              <br />
+              <textarea className="card-text" value={log.content}></textarea>
+            </div>
+          </div>
+          {log.user === user._id && <button onClick={() => handleDeleteLog(log._id)} type="button" className="btn btn-danger btn-sm" id="deleteBtn">DELETE</button>}
+        </div>
+      </div>
     </main>
   )
 }
