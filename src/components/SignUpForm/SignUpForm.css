@@ -1,3 +1,7 @@
 #signUpForm {
   max-width: 30%;
 }
+
+label {
+  color: whitesmoke;
+}
