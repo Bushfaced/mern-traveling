@@ -5,7 +5,7 @@
   border: solid 2px black;
   border-radius: 5%;
   font-family: 'Franklin Gothic Medium';
-  text-shadow: 1px 1px rgb(0, 115, 255);
+  text-shadow: 1px 1px 1px black;
 }
 
 #itemLink {
