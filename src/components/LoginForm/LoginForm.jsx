@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
-// const bootstrap = require('bootstrap');
+import './LoginForm.css'
 
 export default function LoginForm({ setUser }) {
   const [credentials, setCredentials] = useState({
@@ -25,17 +25,20 @@ export default function LoginForm({ setUser }) {
   }
 
   return (
-    <div>
-      <div className="">
-        <form autoComplete="off" onSubmit={handleSubmit}>
-          <label>Email</label>
-          <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
-          <label>Password</label>
-          <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
-          <button type="submit">LOG IN</button>
-        </form>
-      </div>
-      <p className="error-message">&nbsp;{error}</p>
-    </div>
+    <main className='container' id='loginForm'>
+      <form autoComplete="off" onSubmit={handleSubmit}>
+        <div className="row g-3 align-items-center">
+            <label for="exampleInputEmail1" className="form-label">Email</label>
+            <input type="email" name="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value={credentials.email} onChange={handleChange} required />
+            <div id="emailHelp" className="form-text"></div>
+          </div>
+          <div className="row g-3 align-items-center">
+            <label for="exampleInputPassword1" className="form-label">Password</label>
+            <input type="password" name="password" className="form-control" id="exampleInputPassword1" value={credentials.password} onChange={handleChange} required />
+            <button type="submit" className="btn btn-primary">LOG IN</button>
+        </div>
+        <p className="error-message">&nbsp;{error}</p>
+      </form>
+    </main>
   );
 }

@@ -7,3 +7,8 @@ body {
 .welcomeMessage {
   text-align: center;
 }
+
+#signupBtn {
+  display: flex;
+  margin: auto;
+}
